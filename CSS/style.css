@@ -118,7 +118,7 @@ nav.nav-bar a:last-of-type {
   margin-right: 0;
 }
 /*MAIN*/
-main.site-main {
+div.site-main {
   margin-top: 3rem;
 }
 div.titulo-entrada {
