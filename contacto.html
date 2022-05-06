@@ -10,8 +10,9 @@
 <body>
   <div class="barra-header">
     <header class="site-header contenedor">
-      <img src="IMG/logo.jpeg" alt="logo" id="logo">
+      
       <div class="titulo-header">
+        <img src="IMG/logoaquiles.png" alt="logo" id="logo">
         <a href="index.html">
           <h1>AquilesGaming</h1>
         </a>
@@ -31,7 +32,7 @@
     </nav>
   </div>
   <div class="contenedor">
-  <form action="">
+  <form action="" class="formulario-contacto">
     <fieldset>
       <legend>Informacion Personal</legend>
       <label for="nombre">Nombre:</label>
@@ -44,10 +45,56 @@
       <input type="tel" id="telefono" placeholder="Tu telefono">
       <label for="mensaje">Mensaje:</label>
       <textarea name="" id="mensaje"></textarea>
+      <div class="captcha">
+        <span class="captchaValue"></span>
+        <input type="text" id="inputCaptcha">
+        <button class="btn" id="btn-refresh" type="button"><i class="fa-solid fa-rotate"></i></button>
+        <button class="btn btn-verde" id="btn-send" type="button">Enviar Consulta</button>
+      </div>
+      <div class="respuesta"></div>
     </fieldset>
-    <input type="submit" value="Enviar Consulta" class="btn btn-verde">
-  </form>
   </div>
+
+  <div class="contenedor">
+    <div class="site-main">
+      <div class="titulo-entrada">
+        <h2 class="centrar-texto">segui mirando</h2>
+      </div>
+      <div class="contenido-principal">
+        <div class="entrada-articulo">
+          <div class="imagen">
+            <img src="IMG/pc.jpg" alt="imagen pc 1">
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, assumenda.</p>
+          <p class="precio">$45.496</p>
+          <p>12 cuotas de $4.595</p>
+          <a href="pc.html" class="btn btn-verde">Ver Mas</a>
+        </div>
+        <div class="entrada-articulo">
+          <div class="imagen">
+            <img src="IMG/pc2.jpg" alt="imagen pc 2">
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, assumenda.</p>
+          <p class="precio">$66.500</p>
+          <p>12 de cuotas de $5541,66</p>
+          <a href="pc.html" class="btn btn-verde">Ver Mas</a>
+        </div>
+        <div class="entrada-articulo">
+          <div class="imagen">
+            <img src="IMG/pc3.jpg" alt="imagen pc 3">
+          </div>
+          <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, assumenda.</p>
+            <p class="precio">$77.000</p>
+            <p>12 de cuotas de $6416,66</p>
+            <a href="pc.html" class="btn btn-verde">Ver Mas</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <footer class="site-footer seccion">
     <div class="contenedor contenedor-footer">
       <h4>AquilesGaming</h4>
@@ -60,5 +107,6 @@
     </div>
   </footer>
   <script src="https://kit.fontawesome.com/db9d899465.js" crossorigin="anonymous"></script>
+  <script src="JS/app.js"></script>
 </body>
 </html>

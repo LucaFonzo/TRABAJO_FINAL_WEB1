@@ -11,7 +11,7 @@ html {
   font-size: 62.5%; /*RESET para REMS - 62.5% = 10px de 16px*/
 }
 body {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-size: 1.6rem;
   margin: 0;
   padding: 0;
@@ -25,6 +25,12 @@ img {
 .contenedor {
   max-width: 1200px;
   margin: 0 auto;
+}
+h1,h2,h3,h4 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+p {
+  font-family: Arial, Helvetica, sans-serif;
 }
 h1 {
   font-size: 3.8rem;
@@ -57,14 +63,15 @@ h4 {
   padding: 1rem;
   border-radius: 1rem;
   transition: all 0.3s ease;
-  color: #fff;
   text-decoration: none;
 }
 .btn-verde {
   background-color: #51f503;
+  color: #fff;
 }
 .btn-violeta {
   background-color: #E900FF;
+  color: #fff;
 }
 .btn:hover {
   cursor: pointer;
@@ -80,7 +87,6 @@ header.site-header {
 }
 #logo {
   height: 50px;
-  border-radius: 1rem;
 }
 div.titulo-header a{
   text-decoration: none;
@@ -90,12 +96,16 @@ div.titulo-header a{
   display: inline;
 }
 input.buscador {
-  width: 50rem;
+  width: 50%;
   height: 4rem;
   margin: 2rem;
+  border-radius: 1rem;
+  border-style: none;
+  margin-left: 0;
+  margin-right: 0;
 }
-.contactanos a{
-  margin-left: 1rem;
+.contactanos a {
+  margin-right: 1rem;
 }
 .contactanos a:hover {
   background-color: #000;
@@ -123,6 +133,7 @@ div.site-main {
 }
 div.titulo-entrada {
   display: inline;
+  text-align: left;
   color: #fff;
   border-radius: 2rem;
   text-align: center;
@@ -130,11 +141,12 @@ div.titulo-entrada {
   border-bottom: 1px solid #E900FF;
 }
 div.titulo-entrada h2 {
+  display: inline;
   text-transform: uppercase;
   font-weight: 700;
 }
 div.titulo-entrada a{
-  margin-left: 1rem;
+  margin-left: 0.5rem;
   color: #fff;
 }
 .contenido-principal {
@@ -191,7 +203,7 @@ div.titulo-entrada a{
 /*INTERNAS*/
 
 /**Formulario**/
-form {
+.formulario-contacto{
   margin-top: 2rem;
 }
 legend {
@@ -204,7 +216,7 @@ label {
   display: block;
   color: #f1f1f1;
 }
-input:not([type="submit"]),textarea{
+.formulario-contacto input:not([type="submit"]),textarea{
   display: block;
   padding: 1rem;
   width: 100%;
@@ -216,10 +228,29 @@ input:not([type="submit"]),textarea{
 textarea {
   height: 15rem;
 }
-input[type="submit"]{
+.formulario-contacto input[type="submit"]{
   margin-top: 2rem;
   float: right;
 }
+/*Captcha*/
+.captchaValue {
+  padding: 1rem;
+  background-color: #fff;
+  text-align: center;
+  color: #000;
+  border-radius: 1rem;
+}
+.captcha input[type="text"]{
+  display: inline;
+  width: 20%;
+}
+.respuesta-incorrecta {
+  color: #FF2919;
+}
+.respuesta-correcta {
+  color: #00A644;
+}
+
 
 /*PAGINA ENTRADA*/
 
