@@ -66,11 +66,11 @@ h4 {
   text-decoration: none;
 }
 .btn-verde {
-  background-color: #51f503;
+  background-color: #6A35E8;
   color: #fff;
 }
 .btn-violeta {
-  background-color: #E900FF;
+  background-color: #6A35E8;
   color: #fff;
 }
 .btn:hover {
@@ -78,7 +78,7 @@ h4 {
 }
 /*HEADER*/
 .barra-header {
-  background-color: #5800FF;
+  background-color: #2F009E;
 }
 header.site-header {
   display: flex;
@@ -112,7 +112,7 @@ input.buscador {
 }
 /*NAV BAR*/
 div.barra-nav {
-  background-color: #E900FF;
+  background-color: #6A35E8;
 }
 nav.nav-bar {
   text-align: center;
@@ -138,7 +138,7 @@ div.titulo-entrada {
   border-radius: 2rem;
   text-align: center;
   padding-bottom: 2rem;
-  border-bottom: 1px solid #E900FF;
+  border-bottom: 1px solid #6A35E8;
 }
 div.titulo-entrada h2 {
   display: inline;
@@ -159,7 +159,7 @@ div.titulo-entrada a{
 .entrada-articulo {
   flex: 0 0 calc(33.3% - 1rem);
   margin-top: 2rem;
-  border: 1px solid #E900FF;
+  border: 1px solid #6A35E8;
   padding-bottom: 2rem;
 }
 .entrada-articulo img {
@@ -176,14 +176,14 @@ div.titulo-entrada a{
   padding-right: 3rem;
 }
 .entrada-articulo a:hover{
-  background-color: #E900FF;
+  background-color: #6A35E8;
 }
 .precio {
-  color: #51f503;
+  color: #00EB1B;
 }
 /*FOOTER*/
 .site-footer  {
-  background-color: #E900FF;
+  background-color: #6A35E8;
   margin-bottom: 0;
 }
 .copyright {
@@ -208,7 +208,7 @@ div.titulo-entrada a{
 }
 legend {
   font-size: 2.4rem;
-  color: #5800FF;
+  color: #6A35E8;
 }
 label {
   font-weight: 700;
@@ -253,11 +253,6 @@ textarea {
 
 
 /*PAGINA ENTRADA*/
-
-
-
-
-
 .contenedor-articulo{
   width: 80%;
   border: solid 1px rgb(95, 95, 95);
@@ -290,16 +285,16 @@ div.lista-precio ul li{
   padding: 1rem;
 }
 div.lista-precio ul .precio{
-  color: #00e602;
+  color: #00EB1B;
   font-size: 4rem;
   font-weight: 700;
 }
 ul .stock{
-  color: #E900FF;
+  color: #6A35E8;
   font-weight: 700;
 }
 div.lista-precio ul span{
-  color: #00e303;
+  color: #00EB1B;
   font-weight: bold;
 }
 .link-carrito a{
@@ -308,9 +303,9 @@ div.lista-precio ul span{
   margin-left: 3em;
 }
 .link-carrito a:hover {
-  background-color: #00e303;
+  background-color: #00EB1B;
 }
-
+/*TABLA*/
 table{
   width: 80%;
   margin-top: 7rem;
@@ -318,10 +313,9 @@ table{
   margin-left: 13rem;
   border-collapse: collapse;
 }
- thead{
+thead{
   background-color:#202324 ;
   border-bottom: solid 0.2rem #E900FF;
-  
 }
 td{
   font-weight: bold;

@@ -20,10 +20,13 @@ btnRefresh.addEventListener('click', generateCaptcha);
 function checkCaptcha() {
   let inputVal = inputCaptcha.value.split('').join(' ');
   if (inputVal == captchaValue.innerHTML.trimStart()) {
+    respuesta.classList.remove('respuesta-incorrecta')
     respuesta.classList.add('respuesta-correcta')
     respuesta.innerHTML = "Enviado Correctamente"
     inputCaptcha.value = "";
+    generateCaptcha();
   } else {
+    respuesta.classList.remove('respuesta-correcta')
     respuesta.classList.add("respuesta-incorrecta");
     respuesta.innerHTML = "Incorrecto ingrese el captcha nuevamente"
     inputCaptcha.value = "";
