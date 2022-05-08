@@ -11,7 +11,6 @@ html {
   font-size: 62.5%; /*RESET para REMS - 62.5% = 10px de 16px*/
 }
 body {
-  font-family: 'Lato', sans-serif;
   font-size: 1.6rem;
   margin: 0;
   padding: 0;
@@ -33,30 +32,16 @@ p {
   font-family: Arial, Helvetica, sans-serif;
 }
 h1 {
-  font-size: 3.8rem;
+  font-size: 3.6rem;
 }
 h2 {
-  font-size: 3.4rem;
+  font-size: 3rem;
 }
 h3 {
-  font-size: 3rem;
+  font-size: 2.8rem;
 }
 h4 {
   font-size: 2.6rem;
-}
-/*UTILIDADES*/
-.seccion {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-.centrar-texto {
-  text-align: center;
-}
-.texto-izquierda {
-  text-align: left;
-}
-.m-i {
-  display: inline;
 }
 /*BOTONES*/
 .btn {
@@ -186,10 +171,6 @@ div.titulo-entrada a{
   background-color: #6A35E8;
   margin-bottom: 0;
 }
-.copyright {
-  margin: 0;
-  color: #fff;
-}
 .contenedor-footer {
   display: flex;
   justify-content: space-between;
@@ -211,9 +192,8 @@ legend {
   color: #6A35E8;
 }
 label {
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
-  display: block;
   color: #f1f1f1;
 }
 .formulario-contacto input:not([type="submit"]),textarea{
@@ -226,11 +206,7 @@ label {
   border-radius: 1rem;
 }
 textarea {
-  height: 15rem;
-}
-.formulario-contacto input[type="submit"]{
-  margin-top: 2rem;
-  float: right;
+  height: 13rem;
 }
 /*Captcha*/
 .captchaValue {
@@ -250,13 +226,10 @@ textarea {
 .respuesta-correcta {
   color: #00A644;
 }
-
-
 /*PAGINA ENTRADA*/
 .contenedor-articulo{
   width: 80%;
   border: solid 1px rgb(95, 95, 95);
-  margin-left: 13rem;
   margin-top: 5rem;
   display: grid;
   grid-template-columns: repeat(2,1fr);
@@ -275,10 +248,9 @@ div.lista-precio ul{
   list-style: none;
   font-size: 2.2rem;
   font-weight: 400;
-  line-height: 4rem;
-  margin: 0;
+  line-height: 3.5rem;
+  margin: 0 0 5rem 0;
   color: #b0a99f;
-  margin-bottom: 5rem;
 }
 div.lista-precio ul li{
   text-transform: uppercase;
@@ -290,7 +262,7 @@ div.lista-precio ul .precio{
   font-weight: 700;
 }
 ul .stock{
-  color: #6A35E8;
+  color: #FF2919;
   font-weight: 700;
 }
 div.lista-precio ul span{
@@ -308,10 +280,9 @@ div.lista-precio ul span{
 /*TABLA*/
 table{
   width: 80%;
-  margin-top: 7rem;
-  text-align: left;
-  margin-left: 13rem;
+  margin: 2rem 0 2rem 0;
   border-collapse: collapse;
+  text-align: left;
 }
 thead{
   background-color:#202324 ;
@@ -320,7 +291,7 @@ thead{
 td{
   font-weight: bold;
 }
-.tr:hover{
+tr:hover{
   background-color: #000;
 }
 th,td{
