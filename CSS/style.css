@@ -25,8 +25,11 @@ img {
   max-width: 1200px;
   margin: 0 auto;
 }
-h1,h2,h3,h4 {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+h1,
+h2,
+h3,
+h4 {
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 p {
   font-family: Arial, Helvetica, sans-serif;
@@ -51,11 +54,11 @@ h4 {
   text-decoration: none;
 }
 .btn-verde {
-  background-color: #6A35E8;
+  background-color: #6a35e8;
   color: #fff;
 }
 .btn-violeta {
-  background-color: #6A35E8;
+  background-color: #6a35e8;
   color: #fff;
 }
 .btn:hover {
@@ -63,7 +66,7 @@ h4 {
 }
 /*HEADER*/
 .barra-header {
-  background-color: #2F009E;
+  background-color: #2f009e;
 }
 header.site-header {
   display: flex;
@@ -73,7 +76,7 @@ header.site-header {
 #logo {
   height: 50px;
 }
-div.titulo-header a{
+div.titulo-header a {
   text-decoration: none;
   color: #fff;
 }
@@ -97,7 +100,7 @@ input.buscador {
 }
 /*NAV BAR*/
 div.barra-nav {
-  background-color: #6A35E8;
+  background-color: #6a35e8;
 }
 nav.nav-bar {
   text-align: center;
@@ -123,14 +126,14 @@ div.titulo-entrada {
   border-radius: 2rem;
   text-align: center;
   padding-bottom: 2rem;
-  border-bottom: 1px solid #6A35E8;
+  border-bottom: 1px solid #6a35e8;
 }
 div.titulo-entrada h2 {
   display: inline;
   text-transform: uppercase;
   font-weight: 700;
 }
-div.titulo-entrada a{
+div.titulo-entrada a {
   margin-left: 0.5rem;
   color: #fff;
 }
@@ -144,7 +147,7 @@ div.titulo-entrada a{
 .entrada-articulo {
   flex: 0 0 calc(33.3% - 1rem);
   margin-top: 2rem;
-  border: 1px solid #6A35E8;
+  border: 1px solid #6a35e8;
   padding-bottom: 2rem;
 }
 .entrada-articulo img {
@@ -155,20 +158,20 @@ div.titulo-entrada a{
   font-size: 1.8rem;
   font-weight: 400;
 }
-.entrada-articulo a{
+.entrada-articulo a {
   margin-top: 1rem;
   padding-left: 3rem;
   padding-right: 3rem;
 }
-.entrada-articulo a:hover{
-  background-color: #6A35E8;
+.entrada-articulo a:hover {
+  background-color: #6a35e8;
 }
 .precio {
-  color: #00EB1B;
+  color: #00eb1b;
 }
 /*FOOTER*/
-.site-footer  {
-  background-color: #6A35E8;
+.site-footer {
+  background-color: #6a35e8;
   margin-bottom: 0;
 }
 .contenedor-footer {
@@ -184,19 +187,20 @@ div.titulo-entrada a{
 /*INTERNAS*/
 
 /**Formulario**/
-.formulario-contacto{
+.formulario-contacto {
   margin-top: 2rem;
 }
 legend {
   font-size: 2.4rem;
-  color: #6A35E8;
+  color: #6a35e8;
 }
 label {
   font-weight: 500;
   text-transform: uppercase;
   color: #f1f1f1;
 }
-.formulario-contacto input:not([type="submit"]),textarea{
+.formulario-contacto input:not([type="submit"]),
+textarea {
   display: block;
   padding: 1rem;
   width: 100%;
@@ -216,23 +220,26 @@ textarea {
   color: #000;
   border-radius: 1rem;
 }
-.captcha input[type="text"]{
+.captcha input[type="text"] {
   display: inline;
   width: 20%;
 }
+.respuesta-incorrecta-inputs {
+  border-radius: 1px solid #ff2919;
+}
 .respuesta-incorrecta {
-  color: #FF2919;
+  color: #ff2919;
 }
 .respuesta-correcta {
-  color: #00A644;
+  color: #00a644;
 }
 /*PAGINA ENTRADA*/
-.contenedor-articulo{
+.contenedor-articulo {
   width: 80%;
   border: solid 1px rgb(95, 95, 95);
   margin-top: 5rem;
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   height: 100%;
 }
@@ -244,7 +251,7 @@ textarea {
   width: 100%;
   height: 100%;
 }
-div.lista-precio ul{
+div.lista-precio ul {
   list-style: none;
   font-size: 2.2rem;
   font-weight: 400;
@@ -252,49 +259,49 @@ div.lista-precio ul{
   margin: 0 0 5rem 0;
   color: #b0a99f;
 }
-div.lista-precio ul li{
+div.lista-precio ul li {
   text-transform: uppercase;
   padding: 1rem;
 }
-div.lista-precio ul .precio{
-  color: #00EB1B;
+div.lista-precio ul .precio {
+  color: #00eb1b;
   font-size: 4rem;
   font-weight: 700;
 }
-ul .stock{
-  color: #FF2919;
+ul .stock {
+  color: #ff2919;
   font-weight: 700;
 }
-div.lista-precio ul span{
-  color: #00EB1B;
+div.lista-precio ul span {
+  color: #00eb1b;
   font-weight: bold;
 }
-.link-carrito a{
+.link-carrito a {
   font-size: 2.2rem;
   font-weight: bold;
   margin-left: 3em;
 }
 .link-carrito a:hover {
-  background-color: #00EB1B;
+  background-color: #00eb1b;
 }
 /*TABLA*/
-table{
+table {
   width: 80%;
   margin: 2rem 0 2rem 0;
   border-collapse: collapse;
   text-align: left;
 }
-thead{
-  background-color:#202324 ;
-  border-bottom: solid 0.2rem #E900FF;
+thead {
+  background-color: #202324;
+  border-bottom: solid 0.2rem #e900ff;
 }
-td{
+td {
   font-weight: bold;
 }
-tr:hover{
+tr:hover {
   background-color: #000;
 }
-th,td{
+th,
+td {
   padding: 1rem;
 }
-
