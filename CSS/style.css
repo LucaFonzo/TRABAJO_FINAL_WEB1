@@ -21,9 +21,11 @@ body {
 img {
   max-width: 100%;
 }
-.contenedor {
-  max-width: 1200px;
-  margin: 0 auto;
+@media (min-width: 768px) {
+  .contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
 h1,
 h2,
@@ -68,10 +70,12 @@ h4 {
 .barra-header {
   background-color: #2f009e;
 }
-header.site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+@media (min-width: 768px) {
+  header.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 #logo {
   height: 50px;
@@ -84,13 +88,26 @@ div.titulo-header a {
   display: inline;
 }
 input.buscador {
-  width: 50%;
+  width: 100%;
   height: 4rem;
   margin: 2rem;
   border-radius: 1rem;
   border-style: none;
   margin-left: 0;
   margin-right: 0;
+}
+@media (min-width: 768px) {
+  input.buscador {
+    width: 50%;
+  }
+}
+.contactanos {
+  display: none;
+}
+@media (min-width: 768px) {
+  .contactanos {
+    display: block;
+  }
 }
 .contactanos a {
   margin-right: 1rem;
@@ -103,8 +120,14 @@ div.barra-nav {
   background-color: #6a35e8;
 }
 nav.nav-bar {
+  display: none;
   text-align: center;
   padding: 2rem;
+}
+@media (min-width: 768px) {
+  nav.nav-bar {
+    display: block;
+  }
 }
 nav.nav-bar a {
   color: #fff;
@@ -254,13 +277,20 @@ textarea {
 }
 /*PAGINA ENTRADA*/
 .contenedor-articulo {
-  width: 80%;
+  width: 100%;
   border: solid 1px rgb(95, 95, 95);
   margin-top: 5rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   height: 100%;
+  padding-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .contenedor-articulo {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 0;
+  }
 }
 .titulo-compra h2 {
   color: #b0a99f;
@@ -275,8 +305,13 @@ div.lista-precio ul {
   font-size: 2.2rem;
   font-weight: 400;
   line-height: 3.5rem;
-  margin: 0 0 5rem 0;
+  margin: 0 0 2rem 0;
   color: #b0a99f;
+}
+@media (min-width: 768px) {
+  div.lista-precio ul {
+    margin: 0 0 5rem 0;
+  }
 }
 div.lista-precio ul li {
   text-transform: uppercase;
@@ -296,19 +331,35 @@ div.lista-precio ul span {
   font-weight: bold;
 }
 .link-carrito a {
-  font-size: 2.2rem;
+  display: flex;
+  font-size: 1.4rem;
   font-weight: bold;
-  margin-left: 3em;
+  margin-left: 5em;
+  width: 45%;
+  margin-right: 5rem;
+}
+@media (min-width: 768px) {
+  .link-carrito a {
+    font-size: 2.2rem;
+    display: block;
+    margin: 0 0 0 2rem;
+    width: 60%;
+  }
 }
 .link-carrito a:hover {
   background-color: #00eb1b;
 }
 /*TABLA*/
 table {
-  width: 80%;
+  width: 100%;
   margin: 2rem 0 2rem 0;
   border-collapse: collapse;
   text-align: left;
+}
+@media (min-width: 768px) {
+  table {
+    width: 80%;
+  }
 }
 thead {
   background-color: #202324;
