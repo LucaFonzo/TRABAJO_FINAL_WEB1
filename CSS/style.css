@@ -120,28 +120,42 @@ div.site-main {
   margin-top: 3rem;
 }
 div.titulo-entrada {
-  display: inline;
+  display: block;
   text-align: left;
+  text-align: center;
   color: #fff;
   border-radius: 2rem;
-  text-align: center;
   padding-bottom: 2rem;
   border-bottom: 1px solid #6a35e8;
 }
+@media (min-width: 768px) {
+  div.titulo-entrada {
+    display: inline;
+  }
+}
 div.titulo-entrada h2 {
-  display: inline;
   text-transform: uppercase;
   font-weight: 700;
+}
+@media (min-width: 768px) {
+  div.titulo-entrada h2 {
+    display: inline;
+  }
 }
 div.titulo-entrada a {
   margin-left: 0.5rem;
   color: #fff;
 }
 .contenido-principal {
-  display: flex;
-  justify-content: space-between;
+  display: block;
   text-align: center;
   margin: 2rem;
+}
+@media (min-width: 768px) {
+  .contenido-principal {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 /*ENTRADAS*/
 .entrada-articulo {
@@ -175,17 +189,22 @@ div.titulo-entrada a {
   margin-bottom: 0;
 }
 .contenedor-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  text-align: center;
+  display: block;
   padding: 3rem 0rem;
+}
+@media (min-width: 768px) {
+  .contenedor-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 .contenedor-footer h4 {
   margin: 0;
 }
 
 /*INTERNAS*/
-
 /**Formulario**/
 .formulario-contacto {
   margin-top: 2rem;
