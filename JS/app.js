@@ -5,8 +5,21 @@ const inputCaptcha = document.querySelector('#inputCaptcha');
 const btnRefresh = document.querySelector('#btn-refresh');
 const btnSend = document.querySelector('#btn-send');
 const respuesta = document.querySelector('.respuesta');
+const mobileItem = document.querySelector('#mobile-item');
+const mobileNav = document.querySelector('.hidden-mobile-nav')
 
 const caracteres = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'm', 'n', 'l', 'o', 'p', 'q', 'r', 'v', 'w', 'y', 'x', 'z',0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+//Eventos
+document.addEventListener('DOMContentLoaded', iniciarApp);
+
+function iniciarApp() {
+  //Refresh captcha
+  btnRefresh.addEventListener("click", generateCaptcha);
+  //Enviar captcha
+  btnSend.addEventListener("click", checkCaptcha);
+  //Generar Captcha al cargar
+  generateCaptcha();
+}
 
 //Funciones
 function generateCaptcha() {
@@ -16,9 +29,8 @@ function generateCaptcha() {
     captchaValue.innerHTML+= ` ${random}`
   }
 };
-generateCaptcha();
-btnRefresh.addEventListener('click', generateCaptcha);
-function checkCaptcha() {
+function checkCaptcha(e) {
+  e.preventDefault();
   let inputVal = inputCaptcha.value.split('').join(' ');
   if (inputVal == captchaValue.innerHTML.trimStart()) {
     respuesta.classList.remove('respuesta-incorrecta');
@@ -40,4 +52,15 @@ function checkCaptcha() {
     generateCaptcha();
   }
 }
-btnSend.addEventListener('click', checkCaptcha);
+function showNav() {
+  if (mobileNav.classList.contains('hidden-mobile-nav')) {
+    mobileNav.classList.remove('hidden-mobile-nav')
+    mobileNav.classList.add('show-mobile-nav')
+  } else {
+    mobileNav.classList.remove('show-mobile-nav')
+    mobileNav.classList.add('hidden-mobile-nav')
+  }
+}
+  //Mostrar Nav Mobile
+  mobileItem.addEventListener("click", showNav);
+
