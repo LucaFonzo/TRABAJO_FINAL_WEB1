@@ -62,5 +62,67 @@ function showNav() {
   }
 }
   //Mostrar Nav Mobile
-  mobileItem.addEventListener("click", showNav);
+mobileItem.addEventListener("click", showNav);
+
+//Tabla dinamica
+const formPc = document.querySelector('#form-pc');
+const btnFormPc = document.querySelector('#btnFormPC');
+const procesadores = document.querySelector('#procesadores');
+const tablaPc = document.querySelector('#tabla-pc')
+
+btnFormPc.addEventListener('click', (e) => {
+  e.preventDefault()
+  let formDataPc = new FormData(formPc);
+  let procesador = formDataPc.get("procesador");
+  let motherboard = formDataPc.get("motherboard");
+  let gpu = formDataPc.get("gpu");
+  let ram1 = formDataPc.get("ram1");
+  let ram2 = formDataPc.get("ram2");
+  let gabinete = formDataPc.get("gabinete");
+
+  let pc = {
+    procesador: procesador,
+    motherboard: motherboard,
+    gpu: gpu,
+    slot1: ram1,
+    slot2: ram2,
+    gabinete: gabinete,
+    precio: 500,
+  };
+  agregarElementos(pc);
+})
+
+function agregarElementos(pc) {
+  const tr = document.createElement('tr');
+  tr.innerHTML = `
+  <td>
+  ${pc.procesador}
+  </td>
+  <td>
+  ${pc.motherboard}
+  </td>
+  <td>
+  ${pc.gpu}
+  </td>
+  <td>
+  ${pc.slot1}
+  </td>
+  <td>
+  ${pc.slot2}
+  </td>
+  <td>
+  ${pc.gabinete}
+  </td>
+  <td>
+  ${pc.precio}
+  </td>
+  `;
+  tablaPc.appendChild(tr)
+}
+
+
+
+
+
+
 

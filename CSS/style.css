@@ -157,6 +157,7 @@ nav.nav-bar a {
   background: none;
   border: none;
   font-size: 2.3rem;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   #mobile-item {
@@ -394,11 +395,10 @@ table {
 }
 @media (min-width: 768px) {
   table {
-    width: 80%;
+    width: 100%;
   }
 }
 thead {
-  background-color: #202324;
   border-bottom: solid 0.2rem #e900ff;
 }
 td {
