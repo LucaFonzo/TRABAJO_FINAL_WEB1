@@ -38,7 +38,7 @@
   </div>
   </div>
   <main class="contenedor">
-    <form action="#" id="form-pc">
+    <form action="#" id="form-pc" class="contenedor-form-tabla">
       <label for="procesador">Elige tu procesador</label>
       <input type="text" name="procesador">
       <label for="motherboard">Elige tu motherboard</label>
@@ -51,16 +51,18 @@
       <input type="text" name="ram2">
       <label for="gabinete">Elige tu gabinete</label>
       <input type="text" name="gabinete">
-      <button id="btnFormPC">Agregar a la tabla</button>
+      <button id="btnFormPC" class="btn btn-violeta">Agregar a la tabla</button>
+      <button id="btnBorrarTodo" class="btn btn-rojo">Borrar Todo</button>
+      <button id="btnx3" class="btn btn-verde">x3</button>
     </form>
     <table>
       <thead>
         <tr>
           <td>Procesador</td>
           <td>motherboard</td>
-          <td>Placa de video</td>
-          <td>Slot ram 1</td>
-          <td>Slot ram 2</td>
+          <td>GPU</td>
+          <td>Ram 1</td>
+          <td>Ram 2</td>
           <td>Gabinete</td>
           <td>Precio Total</td>
         </tr>
