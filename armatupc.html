@@ -13,7 +13,7 @@
   <div class="barra-header">
     <header class="site-header contenedor">
       <div class="titulo-header">
-        <img src="IMG/logoaquiles.png" alt="logo" id="logo">
+        <img src="img/logoaquiles.png" alt="logo" id="logo">
         <a href="index.html">
           <h1>AquilesGaming</h1>
         </a>
@@ -33,43 +33,87 @@
       <a href="categoria-notebooks.html">Notebooks</a>
       <a href="categoria-pcs.html">PCs Armadas</a>
       <a href="contacto.html">Contacto</a>
-      <a href="armatupc.html">Arma Tu Pc</a>
+      <a href="armatupc.html">Arma Tu Combo</a>
     </nav>
   </div>
   </div>
   <main class="contenedor">
     <form action="#" id="form-pc" class="contenedor-form-tabla">
-      <label for="procesador">Elige tu procesador</label>
-      <input type="text" name="procesador">
-      <label for="motherboard">Elige tu motherboard</label>
-      <input type="text" name="motherboard">
-      <label for="gpu">Elige tu placa de video</label>
-      <input type="text" name="gpu">
-      <label for="ram1">Elige tu memoria ram</label>
-      <input type="text" name="ram1">
-      <label for="ram2">Elige tu memoria ram</label>
-      <input type="text" name="ram2">
-      <label for="gabinete">Elige tu gabinete</label>
-      <input type="text" name="gabinete">
+      <div class="titulo-entrada">
+      <h2 class="texto-izquierda m-i">ARMA TU COMBO</h2>
+    </div>
+      <div class="container-input-label">
+        <div class="form-group">
+          <input type="text" name="procesador" class="input-table" placeholder=" ">
+          <label for="procesador" class="label-table">Elige tu procesador</label>
+        </div>
+      </div>
+    <div class="container-input-label">
+      <div class="form-group">
+      <input type="text" name="motherboard" class="input-table" placeholder=" ">
+      <label for="motherboard" class="label-table">Elige tu motherboard</label>
+    </div>
+    </div>
+    <div class="container-input-label">
+      <div class="form-group">
+        <input type="text" name="gpu" class="input-table" placeholder=" ">
+        <label for="gpu" class="label-table">Elige tu placa de video</label>
+      </div>
+    </div>
+    <div class="container-input-label">
+      <div class="form-group">
+        <input type="text" name="codigo" class="input-table" placeholder=" ">
+        <label for="codigo" class="label-table">Igrese el codigo para un descuento</label>
+      </div>
+    </div>
       <button id="btnFormPC" class="btn btn-violeta">Agregar a la tabla</button>
       <button id="btnBorrarTodo" class="btn btn-rojo">Borrar Todo</button>
       <button id="btnx3" class="btn btn-verde">x3</button>
     </form>
-    <table>
+    <table class="tabla-armatupc">
       <thead>
         <tr>
           <td>Procesador</td>
           <td>motherboard</td>
           <td>GPU</td>
-          <td>Ram 1</td>
-          <td>Ram 2</td>
-          <td>Gabinete</td>
           <td>Precio Total</td>
+          <td>Descuento</td>
         </tr>
       </thead>
       <tbody id="tabla-pc">
       </tbody>
     </table>
+    <div class="contenido-principal">
+      <div class="entrada-articulo">
+        <div class="imagen">
+          <img src="img/pc.jpg" alt="imagen pc 1">
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, assumenda.</p>
+        <p class="precio">$45.496</p>
+        <p>12 cuotas de $4.595</p>
+        <a href="pc.html" class="btn btn-verde">Ver Mas</a>
+      </div>
+      <div class="entrada-articulo">
+        <div class="imagen">
+          <img src="img/pc2.jpg" alt="imagen pc 2">
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, assumenda.</p>
+        <p class="precio">$66.500</p>
+        <p>12 de cuotas de $5541,66</p>
+        <a href="pc.html" class="btn btn-verde">Ver Mas</a>
+      </div>
+      <div class="entrada-articulo">
+        <div class="imagen">
+          <img src="img/pc3.jpg" alt="imagen pc 3">
+        </div>
+        <div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, assumenda.</p>
+          <p class="precio">$77.000</p>
+          <p>12 de cuotas de $6416,66</p>
+          <a href="pc.html" class="btn btn-verde">Ver Mas</a>
+        </div>
+      </div>
+    </div>
   </main>
     <footer class="site-footer">
       <div class="contenedor contenedor-footer">

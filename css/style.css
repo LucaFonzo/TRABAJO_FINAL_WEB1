@@ -86,6 +86,7 @@ h4 {
   height: 50px;
 }
 div.titulo-header a {
+  
   text-decoration: none;
   color: #fff;
 }
@@ -428,7 +429,54 @@ td {
 tr:hover {
   background-color: #000;
 }
-td,th {
+  td,th {
   padding: 1rem;
 }
-
+/*TABLA DINAMICA*/
+.tabla-armatupc tr td {
+  text-transform: capitalize;
+  padding: 0;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .tabla-armatupc tr td {
+    padding: 1rem;
+  }
+}
+#form-pc{
+padding: 1rem;
+}
+.container-input-label{
+  margin-top: 2.5rem;
+  display: grid;
+}
+.form-group{
+  position: relative;
+}
+.input-table{
+  padding: 2.7rem .5rem;
+  font-size: 1.5rem;
+  width: 100%;
+  outline: none;
+  border-bottom:0.2rem solid #e900ff;
+  cursor: pointer;
+}
+.input-table:focus + .label-table,.input-table:not(:placeholder-shown) + .label-table{
+  transform: translateY(-1.2rem) scale(.7);
+  transform-origin: left top;
+  color: #a98fac;
+}
+.label-table{
+  margin-top: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0.5rem;
+  transform: translateY(1rem);
+  transition: transform .5s, color .3s ;
+  color: #000;
+}
+.descuento {
+  background-color: #00a644;
+}

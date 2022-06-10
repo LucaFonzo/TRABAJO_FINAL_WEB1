@@ -14,11 +14,12 @@ const tablaPc = document.querySelector("#tabla-pc");
 const btnx3 = document.querySelector('#btnx3');
 const btnBorrarTodo = document.querySelector("#btnBorrarTodo");
 
-const valoresTabla = [];
+let valoresAlmacenados = [];
 const caracteres = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'm', 'n', 'l', 'o', 'p', 'q', 'r', 'v', 'w', 'y', 'x', 'z',0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 //Eventos
+//Refresh captcha
+document.addEventListener('DOMContentLoaded', iniciarApp);
 function iniciarApp() {
-  //Refresh captcha
   btnRefresh.addEventListener("click", generateCaptcha);
   //Enviar captcha
   btnSend.addEventListener("click", checkCaptcha);
@@ -26,6 +27,7 @@ function iniciarApp() {
   generateCaptcha();
 }
 //Funciones
+//Captcha
 function generateCaptcha() {
   captchaValue.innerHTML = ""
   for (let i = 0; i < 6; i++) {
@@ -56,6 +58,7 @@ function checkCaptcha(e) {
     generateCaptcha();
   }
 }
+//Mostrar Nav
 function showNav() {
   if (mobileNav.classList.contains('hidden-mobile-nav')) {
     mobileNav.classList.remove('hidden-mobile-nav')
@@ -66,83 +69,61 @@ function showNav() {
   }
 }
   //Mostrar Nav Mobile
-mobileItem.addEventListener("click", showNav);
+  mobileItem.addEventListener("click", showNav);
 //Tabla dinamica
-btnFormPc.addEventListener('click', (e) => {
+let pc = {
+  procesador: '',
+  motherboard: '',
+  gpu: '',
+  precio: 500,
+};
+btnFormPc.addEventListener('click', e => {
   e.preventDefault()
   let formDataPc = new FormData(formPc);
-  let procesador = formDataPc.get("procesador");
-  let motherboard = formDataPc.get("motherboard");
-  let gpu = formDataPc.get("gpu");
-  let ram1 = formDataPc.get("ram1");
-  let ram2 = formDataPc.get("ram2");
-  let gabinete = formDataPc.get("gabinete");
-  let pc = {
-    procesador: procesador,
-    motherboard: motherboard,
-    gpu: gpu,
-    slot1: ram1,
-    slot2: ram2,
-    gabinete: gabinete,
-    precio: 500,
-  };
-  valoresTabla.push(pc);
-  agregarElementos(pc);
+  pc.procesador = formDataPc.get("procesador");
+  pc.motherboard = formDataPc.get("motherboard");
+  pc.gpu = formDataPc.get("gpu");
+  let codigo = formDataPc.get("codigo");
+  valoresAlmacenados.push(pc);
+  agregarElementos(pc, codigo);
 })
-btnx3.addEventListener('click', (e) => {
+btnx3.addEventListener('click', e => {
   e.preventDefault()
   let formDataPc = new FormData(formPc);
-  let procesador = formDataPc.get("procesador");
-  let motherboard = formDataPc.get("motherboard");
-  let gpu = formDataPc.get("gpu");
-  let ram1 = formDataPc.get("ram1");
-  let ram2 = formDataPc.get("ram2");
-  let gabinete = formDataPc.get("gabinete");
-  let pc = {
-    procesador: procesador,
-    motherboard: motherboard,
-    gpu: gpu,
-    slot1: ram1,
-    slot2: ram2,
-    gabinete: gabinete,
-    precio: 500,
-  };
-  console.log(valoresTabla)
-  for (let i = 0; i <= 3; i++) {
-    valoresTabla.push(pc);
-    agregarElementos(pc);
+  pc.procesador = formDataPc.get("procesador");
+  pc.motherboard = formDataPc.get("motherboard");
+  pc.gpu = formDataPc.get("gpu");
+  let codigo = formDataPc.get("codigo");
+  for (let i = 0; i < 3; i++) {
+    valoresAlmacenados.push(pc);
+    agregarElementos(pc,codigo);
   }
-  e.preventDefault()
 })
-function agregarElementos(pc) {
+function agregarElementos(pc,codigo) {
   const tr = document.createElement('tr');
-  tr.innerHTML = `
-  <td>
-  ${pc.procesador}
-  </td>
-  <td>
-  ${pc.motherboard}
-  </td>
-  <td>
-  ${pc.gpu}
-  </td>
-  <td>
-  ${pc.slot1}
-  </td>
-  <td>
-  ${pc.slot2}
-  </td>
-  <td>
-  ${pc.gabinete}
-  </td>
-  <td>
-  ${pc.precio}
-  </td>
+  if (codigo != '') {
+    tr.innerHTML = `
+  <td>${pc.procesador}</td>
+  <td>${pc.motherboard}</td>
+  <td>${pc.gpu}</td>
+  <td>${pc.precio}</td>
+  <td>15%</td>
   `;
+    tr.classList.add('descuento');
+  } else {
+    tr.innerHTML = `
+  <td>${pc.procesador}</td>
+  <td>${pc.motherboard}</td>
+  <td>${pc.gpu}</td>
+  <td>${pc.precio}</td>
+  <td>0%</td>
+  `;
+  }
   tablaPc.appendChild(tr)
 }
 btnBorrarTodo.addEventListener('click', e => {
   e.preventDefault();
+  valoresAlmacenados = [];
   borrarHTML()
 })
 function borrarHTML() {
