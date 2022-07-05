@@ -62,14 +62,27 @@
     </div>
     <div class="container-input-label">
       <div class="form-group">
-        <input type="text" name="codigo" class="input-table" placeholder=" " required>
+        <input type="text" name="codigo" class="input-table" placeholder=" ">
         <label for="codigo" class="label-table">Igrese el codigo para un descuento</label>
       </div>
     </div>
       <button id="btnFormPC" class="btn btn-violeta">Agregar a la tabla</button>
-      <button id="btnBorrarTodo" class="btn btn-rojo">Borrar Todo</button>
+      <button id="btn-borrar" class="btn btn-rojo">Borrar Todos</button>
       <button id="btnx3" class="btn btn-verde">x3</button>
     </form>
+    <p>Filtrar por:</p>
+    <label for="filtrarDescuento">Descuento</label>
+    <select name="filtrarDescuento" id="filtrarDescuento">
+      <option value="">---</option>
+      <option value="si">Si</option>
+      <option value="no"> No</option>
+    </select>
+    <label for="filtrarPrecio">Precio</label>
+    <select name="filtrarPrecio" id="filtrarPrecio">
+      <option value="">---</option>
+      <option value="50">Mayor o igual a 50</option>
+      <option value="49">Menor a 50</option>
+    </select>
     <table class="tabla-armatupc">
       <thead>
         <tr>
@@ -83,6 +96,10 @@
       <tbody id="tabla-pc">
       </tbody>
     </table>
+    <div class="btn-anterior-siguente">
+      <button id="btnAnterior">Anterior</button>
+      <button id="btnSiguente">Siguente</button>
+    </div>
     <div class="contenido-principal">
       <div class="entrada-articulo">
         <div class="imagen">
@@ -126,7 +143,7 @@
         </nav>
       </div>
     </footer>
-    <script src="https://kit.fontawesome.com/db9d899465.js" crossorigin="anonymous"></script>
+    <script src="js/tabla.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
